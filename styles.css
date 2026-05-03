@@ -1,6 +1,6 @@
-@import url("./Daniel Quandt_files/css");
-@import url("./Daniel Quandt_files/css(1)");
-@import url("./Daniel Quandt_files/rs=AGEqA5nDdM5gttNRGJxOe3dA2pRlg9IN1A");
+* {
+  box-sizing: border-box;
+}
 
 html,
 body {
@@ -8,7 +8,189 @@ body {
   padding: 0;
 }
 
-body,
-body * {
+body {
   font-family: "Futura Md BT", "Futura", "Trebuchet MS", sans-serif;
+  background: #ffffff;
+  color: #2c2c2c;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 28px 24px 120px;
+}
+
+.hero {
+  text-align: center;
+  padding-top: 6px;
+  padding-bottom: 40px;
+}
+
+.hero__corner {
+  position: absolute;
+  top: 22px;
+  left: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #4b4b4b;
+  font-size: 14px;
+}
+
+.hero__corner img {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hero__avatar {
+  width: 270px;
+  height: 270px;
+  margin: 38px auto 16px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.hero__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__links {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin: 10px 0 26px;
+}
+
+.icon-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #3a3a3a;
+}
+
+.icon-link__circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-link__circle img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.icon-link__label {
+  font-size: 12px;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 500;
+  margin: 0 0 10px;
+  color: #4a4f57;
+}
+
+.hero__subtitle {
+  max-width: 680px;
+  margin: 0 auto 36px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555a60;
+}
+
+.hero__section-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #3b3f45;
+  margin: 12px 0 0;
+}
+
+.projects {
+  display: grid;
+  gap: 80px;
+  margin-top: 40px;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: minmax(320px, 1.2fr) minmax(260px, 1fr);
+  gap: 48px;
+  align-items: start;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.project.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project__media {
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.project__media img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.project__content h2 {
+  font-size: 24px;
+  margin: 0 0 10px;
+  color: #3b3f45;
+}
+
+.project__content p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #53575c;
+}
+
+@media (max-width: 900px) {
+  .project {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__corner {
+    position: static;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero__avatar {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero__links {
+    gap: 18px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
 }
