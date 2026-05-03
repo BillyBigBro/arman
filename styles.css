@@ -1,0 +1,14 @@
+@import url("./Daniel Quandt_files/css");
+@import url("./Daniel Quandt_files/css(1)");
+@import url("./Daniel Quandt_files/rs=AGEqA5nDdM5gttNRGJxOe3dA2pRlg9IN1A");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+body * {
+  font-family: "Futura Md BT", "Futura", "Trebuchet MS", sans-serif;
+}
